@@ -48,3 +48,6 @@ print("5 kFold scores mean = {} and std = {}".format(cv_score.mean(), cv_score.s
 f1_score = cross_validation.cross_val_score(svc, iris.data, y=iris.target, cv=kf, scoring='f1')
 precision = cross_validation.cross_val_score(svc, iris.data, y=iris.target, cv=kf, scoring='precision')
 recall = cross_validation.cross_val_score(svc, iris.data, y=iris.target, cv=kf, scoring='recall')
+
+print("F1 score mean = {}...Accuracy mean = {}".format(f1_score.mean(), cv_score.mean()))
+print("Accuracy is better than F1 score.")
